@@ -1,5 +1,5 @@
-import eatData from '../helpers/data/eatData';
-import utils from '../helpers/utils';
+import eatData from '../../helpers/data/eatData';
+import utils from '../../helpers/utils';
 
 const eatQuadBuilder = () => {
   const fullness = eatData.getFullScore();

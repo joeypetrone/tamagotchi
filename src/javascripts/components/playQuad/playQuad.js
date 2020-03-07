@@ -1,5 +1,5 @@
-import playData from '../helpers/data/playData';
-import utils from '../helpers/utils';
+import playData from '../../helpers/data/playData';
+import utils from '../../helpers/utils';
 
 const playQuadBuilder = () => {
   const funScore = playData.getFunScore();

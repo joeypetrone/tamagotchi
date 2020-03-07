@@ -1,5 +1,5 @@
-import sleepData from '../helpers/data/sleepData';
-import utils from '../helpers/utils';
+import sleepData from '../../helpers/data/sleepData';
+import utils from '../../helpers/utils';
 
 const sleepQuadBuilder = () => {
   const energyScore = sleepData.getEnergyScore();

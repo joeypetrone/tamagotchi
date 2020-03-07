@@ -1,7 +1,8 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import "./colors";
 
 body {
-  background-color: lightseagreen;
+  background-color: $background;
 }
 
 #app {
@@ -15,30 +16,28 @@ body {
   "fight sleep";
 }
 
-#eat {
-  background-color: lightgreen;
+@mixin quadrant($quad-color) {
+  background-color: $quad-color;
   padding: 10px;
   text-align: center;
+}
+
+#eat {
+  @include quadrant($eatQuad);
   grid-area: eat;
 }
 
 #play {
-  background-color: rgb(252, 177, 255);
-  padding: 10px;
-  text-align: center;
+  @include quadrant($playQuad);
   grid-area: play;
 }
 
 #fight {
-  background-color: lightpink;
-  padding: 10px;
-  text-align: center;
+  @include quadrant($fightQuad);
   grid-area: fight;
 }
 
 #sleep {
-  background-color: rgb(130, 218, 253);
-  padding: 10px;
-  text-align: center;
+  @include quadrant($sleepQuad);
   grid-area: sleep;
 }
