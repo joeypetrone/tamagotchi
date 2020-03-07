@@ -1,5 +1,5 @@
 
-let fun = 70;
+let fun = 50;
 
 const getFunScore = () => fun;
 
