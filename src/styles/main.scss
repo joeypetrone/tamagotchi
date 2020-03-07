@@ -12,7 +12,7 @@ body {
   grid-row-gap: 10px;
   grid-template-areas: 
   "eat play"
-  "fight .";
+  "fight sleep";
 }
 
 #eat {
@@ -34,4 +34,11 @@ body {
   padding: 10px;
   text-align: center;
   grid-area: fight;
+}
+
+#sleep {
+  background-color: rgb(130, 218, 253);
+  padding: 10px;
+  text-align: center;
+  grid-area: sleep;
 }

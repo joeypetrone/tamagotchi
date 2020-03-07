@@ -1,5 +1,5 @@
 
-let strength = 70;
+let strength = 100;
 
 const getStrengthScore = () => strength;
 
