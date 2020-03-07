@@ -5,6 +5,8 @@ import playQuad from './components/playQuad';
 import playData from './helpers/data/playData';
 import fightQuad from './components/fightQuad';
 import fightData from './helpers/data/fightData';
+import sleepQuad from './components/sleepQuad';
+import sleepData from './helpers/data/sleepData';
 
 const addToFullScore = () => {
   eatData.setFullScore(10);
@@ -36,6 +38,16 @@ const subFromStrengthScore = () => {
   fightQuad.fightQuadBuilder();
 };
 
+const addNap = () => {
+  sleepData.setEnergyScore(50);
+  sleepQuad.sleepQuadBuilder();
+};
+
+const addDeepSlumber = () => {
+  sleepData.setEnergyScore(60);
+  sleepQuad.sleepQuadBuilder();
+};
+
 const buttonEvents = () => {
   $('#eat').on('click', '#healthy-food-btn', addToFullScore);
   $('#eat').on('click', '#unhealthy-food-btn', subFromFullScore);
@@ -43,12 +55,15 @@ const buttonEvents = () => {
   $('#play').on('click', '#slightly-fun-btn', addSlightlyFun);
   $('#fight').on('click', '#run-away-btn', addToStrengthScore);
   $('#fight').on('click', '#violence-btn', subFromStrengthScore);
+  $('#sleep').on('click', '#nap-btn', addNap);
+  $('#sleep').on('click', '#deep-slumber-btn', addDeepSlumber);
 };
 
 const quadLoader = () => {
   eatQuad.eatQuadBuilder();
   playQuad.playQuadBuilder();
   fightQuad.fightQuadBuilder();
+  sleepQuad.sleepQuadBuilder();
 };
 
 const init = () => {
