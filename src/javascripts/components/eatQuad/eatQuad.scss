@@ -1,0 +1,8 @@
+@import '../../../styles/colors';
+@import '../../../styles/main.scss';
+@import '../../../styles/mixins';
+
+#eat {
+  @include quadrant($eatQuad, $eatButtonText, $eatButton);
+  grid-area: eat;
+}

@@ -1,0 +1,8 @@
+@import '../../../styles/colors';
+@import '../../../styles/main.scss';
+@import '../../../styles/mixins';
+
+#play {
+  @include quadrant($playQuad, $playButtonText, $playButton);
+  grid-area: play;
+}

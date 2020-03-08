@@ -1,43 +1,18 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 @import "./colors";
+@import "./mixins";
 
 body {
   background-color: $background;
-}
 
-#app {
-  display: grid;
-  grid-template-columns: 49.5% 49.5%;
-  grid-template-rows: 175px 175px; 
-  grid-column-gap: 1%;
-  grid-row-gap: 10px;
-  grid-template-areas: 
-  "eat play"
-  "fight sleep";
-}
-
-@mixin quadrant($quad-color) {
-  background-color: $quad-color;
-  padding: 10px;
-  text-align: center;
-}
-
-#eat {
-  @include quadrant($eatQuad);
-  grid-area: eat;
-}
-
-#play {
-  @include quadrant($playQuad);
-  grid-area: play;
-}
-
-#fight {
-  @include quadrant($fightQuad);
-  grid-area: fight;
-}
-
-#sleep {
-  @include quadrant($sleepQuad);
-  grid-area: sleep;
+  #app {
+    display: grid;
+    grid-template-columns: 49.5% 49.5%;
+    grid-template-rows: 53% 53%; 
+    grid-column-gap: 1%;
+    grid-row-gap: 3%;
+    grid-template-areas: 
+    "eat play"
+    "fight sleep";
+  }
 }
