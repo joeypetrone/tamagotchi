@@ -1,0 +1,9 @@
+@import '../../../styles/colors';
+@import '../../../styles/colors';
+@import '../../../styles/main.scss';
+@import '../../../styles/mixins';
+
+#fight {
+  @include quadrant($fightQuad, $fightButtonText, $fightButton);
+  grid-area: fight;
+}

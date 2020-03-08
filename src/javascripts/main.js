@@ -1,11 +1,11 @@
 import '../styles/main.scss';
-import eatQuad from './components/eatQuad';
+import eatQuad from './components/eatQuad/eatQuad';
 import eatData from './helpers/data/eatData';
-import playQuad from './components/playQuad';
+import playQuad from './components/playQuad/playQuad';
 import playData from './helpers/data/playData';
-import fightQuad from './components/fightQuad';
+import fightQuad from './components/fightQuad/fightQuad';
 import fightData from './helpers/data/fightData';
-import sleepQuad from './components/sleepQuad';
+import sleepQuad from './components/sleepQuad/sleepQuad';
 import sleepData from './helpers/data/sleepData';
 
 const addToFullScore = () => {
