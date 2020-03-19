@@ -7,45 +7,54 @@ import fightQuad from './components/fightQuad/fightQuad';
 import fightData from './helpers/data/fightData';
 import sleepQuad from './components/sleepQuad/sleepQuad';
 import sleepData from './helpers/data/sleepData';
+import progressBar from './components/progressBar/progressBar';
+
+const quadLoader = () => {
+  eatQuad.eatQuadBuilder();
+  playQuad.playQuadBuilder();
+  fightQuad.fightQuadBuilder();
+  sleepQuad.sleepQuadBuilder();
+  progressBar.progressBarBuilder();
+};
 
 const addToFullScore = () => {
   eatData.setFullScore(10);
-  eatQuad.eatQuadBuilder();
+  quadLoader();
 };
 
 const subFromFullScore = () => {
   eatData.setFullScore(-3);
-  eatQuad.eatQuadBuilder();
+  quadLoader();
 };
 
 const addSuperFun = () => {
   playData.setFunScore(50);
-  playQuad.playQuadBuilder();
+  quadLoader();
 };
 
 const addSlightlyFun = () => {
   playData.setFunScore(2);
-  playQuad.playQuadBuilder();
+  quadLoader();
 };
 
 const addToStrengthScore = () => {
   fightData.setStrengthScore(1);
-  fightQuad.fightQuadBuilder();
+  quadLoader();
 };
 
 const subFromStrengthScore = () => {
   fightData.setStrengthScore(-10);
-  fightQuad.fightQuadBuilder();
+  quadLoader();
 };
 
 const addNap = () => {
   sleepData.setEnergyScore(50);
-  sleepQuad.sleepQuadBuilder();
+  quadLoader();
 };
 
 const addDeepSlumber = () => {
   sleepData.setEnergyScore(60);
-  sleepQuad.sleepQuadBuilder();
+  quadLoader();
 };
 
 const buttonEvents = () => {
@@ -59,14 +68,8 @@ const buttonEvents = () => {
   $('#sleep').on('click', '#deep-slumber-btn', addDeepSlumber);
 };
 
-const quadLoader = () => {
-  eatQuad.eatQuadBuilder();
-  playQuad.playQuadBuilder();
-  fightQuad.fightQuadBuilder();
-  sleepQuad.sleepQuadBuilder();
-};
-
 const init = () => {
+  progressBar.progressBarBuilder();
   quadLoader();
   buttonEvents();
 };
